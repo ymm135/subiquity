@@ -1,0 +1,4 @@
+2023-11-13 13:35:20,066 INFO subiquity:125 Starting Subiquity revision 3698
+2023-11-13 13:35:20,066 INFO subiquity:126 Arguments passed: ['/snap/subiquity/3698/usr/bin/subiquity']
+2023-11-13 13:35:20,066 DEBUG subiquitycore.screen:135 KDGKBTYPE returned b'\x02', is_linux_tty True
+2023-11-13 13:35:20,066 DEBUG asyncio:59 Using selector: EpollSelector

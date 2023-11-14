@@ -1,0 +1,31 @@
+2023-11-13 13:35:20,212 INFO subiquity:112 Starting Subiquity server revision 3698
+2023-11-13 13:35:20,213 INFO subiquity:113 Arguments passed: ['/snap/subiquity/3698/lib/python3.8/site-packages/subiquity/cmd/server.py']
+2023-11-13 13:35:21,072 INFO aiohttp.access:233  [13/Nov/2023:13:35:21 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 419 "-" "Python/3.8 aiohttp/3.6.2"
+2023-11-13 13:35:24,976 INFO root:39 start: subiquity/core_validation: 
+2023-11-13 13:35:24,976 INFO root:39 finish: subiquity/core_validation: SUCCESS: 
+2023-11-13 13:35:25,283 INFO root:39 start: subiquity/apply_autoinstall_config: 
+2023-11-13 13:35:25,288 INFO root:39 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2023-11-13 13:35:25,293 INFO aiohttp.access:233  [13/Nov/2023:13:35:21 +0000] "GET /meta/status?cur=%22CLOUD_INIT_WAIT%22 HTTP/1.1" 200 412 "-" "Python/3.8 aiohttp/3.6.2"
+2023-11-13 13:35:25,295 INFO root:39 start: subiquity/Network/apply_autoinstall_config/apply_config: silent=False
+2023-11-13 13:35:25,307 INFO root:39 start: subiquity/Meta/status_GET: 
+2023-11-13 13:35:25,718 INFO curtin:1322 Validating extracted storage config components
+2023-11-13 13:35:26,259 INFO root:39 finish: subiquity/Network/apply_autoinstall_config/apply_config: SUCCESS: silent=False
+2023-11-13 13:35:27,336 INFO root:39 finish: subiquity/apply_autoinstall_config: SUCCESS: 
+2023-11-13 13:35:27,343 INFO root:39 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "NEEDS_CONFIRMATION", "confirming_tty": "", "error": null, "cloud_i...
+2023-11-13 13:35:27,344 INFO aiohttp.access:233  [13/Nov/2023:13:35:25 +0000] "GET /meta/status?cur=%22WAITING%22 HTTP/1.1" 200 423 "-" "Python/3.8 aiohttp/3.6.2"
+2023-11-13 13:35:27,344 INFO root:39 start: subiquity/Install/install/configure_apt: configuring apt
+2023-11-13 13:35:27,345 INFO root:39 start: subiquity/Meta/status_GET: 
+2023-11-13 13:35:27,345 INFO root:39 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "RUNNING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2023-11-13 13:35:27,346 INFO aiohttp.access:233  [13/Nov/2023:13:35:27 +0000] "GET /meta/status?cur=%22NEEDS_CONFIRMATION%22 HTTP/1.1" 200 412 "-" "Python/3.8 aiohttp/3.6.2"
+2023-11-13 13:35:27,346 INFO root:39 start: subiquity/Meta/status_GET: 
+2023-11-13 13:35:29,667 INFO root:39 finish: subiquity/Install/install/configure_apt: SUCCESS: configuring apt
+2023-11-13 13:35:29,667 INFO root:39 start: subiquity/Install/install/curtin_install: installing system
+2023-11-13 13:35:50,708 INFO root:39 finish: subiquity/Install/install/curtin_install: SUCCESS: installing system
+2023-11-13 13:35:50,709 INFO root:39 start: subiquity/Install/install/postinstall: final system configuration
+2023-11-13 13:35:50,716 INFO root:39 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "POST_RUNNING", "confirming_tty": "", "error": null, "cloud_init_ok...
+2023-11-13 13:35:50,718 INFO aiohttp.access:233  [13/Nov/2023:13:34:38 +0000] "GET /meta/status?cur=%22RUNNING%22 HTTP/1.1" 200 417 "-" "Python/3.8 aiohttp/3.6.2"
+2023-11-13 13:35:50,718 INFO root:39 start: subiquity/Meta/status_GET: 
+2023-11-13 13:35:53,609 INFO root:39 finish: subiquity/Install/install/postinstall: SUCCESS: final system configuration
+2023-11-13 13:35:53,612 INFO root:39 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "DONE", "confirming_tty": "", "error": null, "cloud_init_ok": true,...
+2023-11-13 13:35:53,621 INFO aiohttp.access:233  [13/Nov/2023:13:35:50 +0000] "GET /meta/status?cur=%22POST_RUNNING%22 HTTP/1.1" 200 409 "-" "Python/3.8 aiohttp/3.6.2"
+2023-11-13 13:35:53,623 INFO root:39 start: subiquity/Meta/status_GET: 

@@ -1,0 +1,73 @@
+#cloud-config
+autoinstall:
+  apt:
+    disable_components: []
+    geoip: true
+    preserve_sources_list: false
+    primary:
+    - arches:
+      - amd64
+      - i386
+      uri: http://cn.archive.ubuntu.com/ubuntu
+    - arches:
+      - default
+      uri: http://ports.ubuntu.com/ubuntu-ports
+  drivers:
+    install: false
+  identity:
+    hostname: netvine
+    password: $6$QWnPN1SXNq5D42Mh$Ir.x3yt3LiPWVUgwl/zh289pWxV1c6yTVeG6csJBXiu7UieXf739cC/5O9J6Mus5bY9ouBqWsNLWaXQUJkEtB0
+    realname: netvine
+    username: netvine
+  kernel:
+    package: linux-generic
+  keyboard:
+    layout: us
+    toggle: null
+    variant: ''
+  locale: en_US.UTF-8
+  network:
+    ethernets:
+      ens33:
+        dhcp4: true
+    version: 2
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: true
+  storage:
+    config:
+    - ptable: gpt
+      path: /dev/sdb
+      wipe: superblock-recursive
+      preserve: false
+      name: ''
+      grub_device: true
+      type: disk
+      id: disk-sdb
+    - device: disk-sdb
+      size: 1048576
+      flag: bios_grub
+      number: 1
+      preserve: false
+      type: partition
+      id: partition-0
+    - device: disk-sdb
+      size: 32209108992
+      wipe: superblock
+      flag: ''
+      number: 2
+      preserve: false
+      type: partition
+      id: partition-1
+    - fstype: ext4
+      volume: partition-1
+      preserve: false
+      type: format
+      id: format-0
+    - path: /
+      device: format-0
+      type: mount
+      id: mount-0
+  updates: security
+  version: 1
